@@ -45,7 +45,7 @@ class PermissionPolicy
      */
     public function delete(User $user, Permission $permission): bool
     {
-        //
+        return $user->hasRole(['Empleado','Admin']);
     }
 
     /**

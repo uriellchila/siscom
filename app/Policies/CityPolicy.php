@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use App\Models\City;
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Auth\Access\Response;
 
 class CityPolicy
@@ -14,7 +15,6 @@ class CityPolicy
     public function viewAny(User $user): bool
     {
         return $user->hasRole(['Admin']);
-        
     }
 
     /**
